@@ -10,13 +10,14 @@
   <version>1.0.0-SNAPSHOT</version>
 
   <parent>
-      <groupId>tw.hyl.common</groupId>
-      <artifactId>scala-masterpom</artifactId>
-      <version>1.0.1</version>
+    <groupId>tw.hyl.common</groupId>
+    <artifactId>scala-masterpom</artifactId>
+    <version>1.0.3-SNAPSHOT</version>
   </parent>
 
   <scm>
     <connection>scm:git:git@github.com:yunglin/common-jackson.git</connection>
+    <developerConnection>scm:git:git@github.com:yunglin/common-jackson.git</developerConnection>
     <url>https://github.com/yunglin/common-jackson</url>
   </scm>
 
@@ -62,12 +63,24 @@
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_${version.scala.lib}</artifactId>
         <version>${version.jackson}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+          </exclusion>
+        </exclusions>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${version.scala.lib}</artifactId>
       <version>${version.scalatest}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.scala-lang</groupId>
+          <artifactId>scala-library</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
