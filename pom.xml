@@ -12,7 +12,7 @@
   <parent>
     <groupId>tw.hyl.common</groupId>
     <artifactId>scala-masterpom</artifactId>
-    <version>1.0.3-SNAPSHOT</version>
+    <version>1.0.3</version>
   </parent>
 
   <scm>
@@ -28,6 +28,22 @@
     <version.scalatest>1.9.1</version.scalatest>
   </properties>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>${version.maven.scala}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>doc-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
