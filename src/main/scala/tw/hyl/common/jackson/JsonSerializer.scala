@@ -23,6 +23,12 @@ object JsonSerializer {
         } catch {
             case e: ClassNotFoundException => {}
         }
+      try {
+          val jodaModule = Class.forName("com.fasterxml.jackson.datatype.joda.JodaModule")
+          m.registerModule(jodaModule.newInstance().asInstanceOf[Module])
+      } catch {
+          case e: ClassNotFoundException => {}
+      }
         m
     }
 
