@@ -12,11 +12,12 @@
   <parent>
       <groupId>tw.hyl.common</groupId>
       <artifactId>scala-masterpom_2.9.3</artifactId>
-      <version>1.0.1</version>
+      <version>1.0.3</version>
   </parent>
 
   <scm>
     <connection>scm:git:git@github.com:yunglin/common-jackson.git</connection>
+    <developerConnection>scm:git:git@github.com:yunglin/common-jackson.git</developerConnection>
     <url>https://github.com/yunglin/common-jackson</url>
   </scm>
 
@@ -27,6 +28,22 @@
     <version.scalatest>1.9.1</version.scalatest>
   </properties>
 
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+        <version>${version.maven.scala}</version>
+        <executions>
+          <execution>
+            <goals>
+              <goal>doc-jar</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
   <dependencies>
       <dependency>
           <groupId>com.fasterxml.jackson.core</groupId>
@@ -51,10 +68,6 @@
                   <groupId>com.fasterxml.jackson.core</groupId>
                   <artifactId>jackson-databind</artifactId>
               </exclusion>
-              <exclusion>
-                  <groupId>joda-time</groupId>
-                  <artifactId>joda-time</artifactId>
-              </exclusion>
           </exclusions>
       </dependency>
 
@@ -62,12 +75,24 @@
         <groupId>com.fasterxml.jackson.module</groupId>
         <artifactId>jackson-module-scala_${version.scala.lib}</artifactId>
         <version>${version.jackson}</version>
+        <exclusions>
+          <exclusion>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-library</artifactId>
+          </exclusion>
+        </exclusions>
     </dependency>
     <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${version.scala.lib}</artifactId>
       <version>${version.scalatest}</version>
       <scope>test</scope>
+      <exclusions>
+        <exclusion>
+          <groupId>org.scala-lang</groupId>
+          <artifactId>scala-library</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
     <dependency>
       <groupId>org.testng</groupId>
