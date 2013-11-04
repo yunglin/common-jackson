@@ -7,7 +7,7 @@
 
   <groupId>tw.hyl.common</groupId>
   <artifactId>jackson</artifactId>
-  <version>1.0.1-SNAPSHOT</version>
+  <version>1.0.1</version>
 
   <parent>
     <groupId>tw.hyl.common</groupId>
@@ -19,7 +19,7 @@
     <connection>scm:git:git@github.com:yunglin/common-jackson.git</connection>
     <developerConnection>scm:git:git@github.com:yunglin/common-jackson.git</developerConnection>
     <url>https://github.com/yunglin/common-jackson</url>
-    <tag>HEAD</tag>
+    <tag>jackson-1.0.1</tag>
   </scm>
 
 
