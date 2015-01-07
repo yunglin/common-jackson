@@ -20,6 +20,8 @@ object JsonSerializer {
         try {
             val scalaModule = Class.forName("com.fasterxml.jackson.module.scala.DefaultScalaModule")
             m.registerModule(scalaModule.newInstance().asInstanceOf[Module])
+            val paranamerModule = Class.forName("com.fasterxml.jackson.module.paranamer.ParanamerModule")
+            m.registerModule(paranamerModule.newInstance().asInstanceOf[Module])
         } catch {
             case e: ClassNotFoundException => {}
         }

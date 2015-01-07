@@ -85,6 +85,11 @@
         </exclusions>
     </dependency>
     <dependency>
+        <groupId>com.fasterxml.jackson.module</groupId>
+        <artifactId>jackson-module-paranamer</artifactId>
+        <version>${version.jackson}</version>
+    </dependency>
+    <dependency>
       <groupId>org.scalatest</groupId>
       <artifactId>scalatest_${version.scala.lib}</artifactId>
       <version>${version.scalatest}</version>
