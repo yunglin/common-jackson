@@ -6,12 +6,12 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>tw.hyl.common</groupId>
-  <artifactId>jackson_2.11</artifactId>
-  <version>2.4.4.2-SNAPSHOT</version>
+  <artifactId>jackson_2.10</artifactId>
+  <version>2.4.4.1-SNAPSHOT</version>
 
   <parent>
     <groupId>tw.hyl.common</groupId>
-    <artifactId>scala-masterpom_2.11</artifactId>
+    <artifactId>scala-masterpom_2.10</artifactId>
     <version>1.1.2</version>
   </parent>
 
@@ -28,7 +28,6 @@
     <connection>scm:git:git@github.com:yunglin/common-jackson.git</connection>
     <developerConnection>scm:git:git@github.com:yunglin/common-jackson.git</developerConnection>
     <url>https://github.com/yunglin/common-jackson</url>
-    <tag>HEAD</tag>
   </scm>
 
 
